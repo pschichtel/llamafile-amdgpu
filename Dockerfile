@@ -16,7 +16,7 @@ RUN echo "deb https://repo.radeon.com/amdgpu/${AMDGPU_REPO_VERSION}/ubuntu ${UBU
  && curl -sL http://repo.radeon.com/rocm/rocm.gpg.key | apt-key add -
 
 RUN apt-get update \
- && apt-get install -y rocm-hip-sdk
+ && apt-get install -y --no-install-recommends --no-install-suggests rocm-llvm hipblas hip-samples rocm-device-libs
 
 ENV PATH="${PATH}:/opt/rocm/bin"
 
