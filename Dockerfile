@@ -1,4 +1,4 @@
-ARG UBUNTU_CODENAME="focal"
+ARG UBUNTU_CODENAME="noble"
 
 FROM docker.io/library/ubuntu:${UBUNTU_CODENAME}
 
